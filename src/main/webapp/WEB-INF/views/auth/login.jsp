@@ -166,7 +166,7 @@ body::after{content:'';position:fixed;width:500px;height:500px;border-radius:50%
                 <span id="stxt">Student portal — Access your courses</span>
             </div>
 
-            <form action="${pageContext.request.contextPath}/perform_login" method="post">
+            <form id="loginForm" action="${pageContext.request.contextPath}/perform_login" method="post">
                 <div class="fw">
                     <label class="fl">Email Address</label>
                     <div class="fg2">
@@ -198,6 +198,15 @@ body::after{content:'';position:fixed;width:500px;height:500px;border-radius:50%
         </div>
     </div>
 </div>
+
+<style>
+.invalid-feedback { color: #ff8a80; font-size: 0.75rem; font-weight: 600; margin-top: 5px; display: block; }
+.finput.is-invalid { border-color: #ff8a80 !important; background: rgba(231,74,59,0.06) !important; }
+.finput.is-valid { border-color: #4dffc5 !important; }
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/auth-validation.js"></script>
 
 <script>
 var R={
