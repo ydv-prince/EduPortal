@@ -143,7 +143,7 @@ body {
             <p class="text-white-50 small">Already have an account? <a href="${pageContext.request.contextPath}/auth/login" class="text-decoration-none" style="color:var(--primary)">Login here</a></p>
         </div>
 
-        <form action="${pageContext.request.contextPath}/auth/register" method="post" enctype="multipart/form-data" class="scroll-form">
+        <form id="registerForm" action="${pageContext.request.contextPath}/auth/register" method="post" enctype="multipart/form-data" class="scroll-form">
             
             <label class="text-white-50 small fw-bold mb-2">I AM REGISTERING AS</label>
             <div class="role-cards">
@@ -215,6 +215,15 @@ body {
         </form>
     </div>
 </div>
+
+<style>
+.invalid-feedback { color: #ff8a80; font-size: 0.75rem; font-weight: 600; margin-top: 5px; display: block; }
+.rfield-input.is-invalid { border-color: #ff8a80 !important; background: rgba(231,74,59,0.06) !important; }
+.rfield-input.is-valid { border-color: #1cc88a !important; }
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/auth-validation.js"></script>
 
 <script>
 function pickRole(role) {
