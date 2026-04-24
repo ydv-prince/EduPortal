@@ -1,4 +1,4 @@
-# Online Course Management System
+# Edu-Portal (Online Course Management System)
 
 A full-featured web-based e-learning platform developed using Java Spring Boot.  
 The system supports **Students**, **Teachers**, and **Administrators** with dedicated dashboards, secure authentication, course management, enrollments, payments, quizzes, assignments, and analytics.
